@@ -7,13 +7,13 @@ int main(void) {
     int x = 5;
     int* pa = &x;
 
-    printf("До:      pa = %p, *pa = %d\n", (void*)pa, *pa);
-    pa++;
-    printf("После ++: pa = %p \n",
-        (void*)pa, (ptrdiff_t)((char*)pa - (char*)&x));
-    pa--;
-    printf("После --: pa = %p, *pa = %d\n", (void*)pa, *pa);
+    printf("До:       pa = %p, *pa = %d\n", pa, *pa);
 
+pa++;
+printf("После ++: pa = %p\n", pa);
+
+pa--;
+printf("После --: pa = %p, *pa = %d\n", pa, *pa);
     
     char   c = 1;  char* pc = &c;
     short  s = 1;  short* ps = &s;
